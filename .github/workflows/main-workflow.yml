@@ -19,7 +19,6 @@ jobs:
         java-version: '21'
         
     - name: Build
-      run: mvn --batch-mode -DskipTests package
-
+      run: javac temperature/Main.java
     - name: Verify
-      run: mvn --batch-mode verify
+      run: java -ea -classpath . temperature.Main
